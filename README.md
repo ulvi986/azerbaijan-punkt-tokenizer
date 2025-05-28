@@ -4,10 +4,10 @@ Punkt tokenizer model for Azerbaijani language, compatible with NLTK.
 # First we download custom_tokenizer.py and azerbaijani_custom.pickle 
 
 # We use like that:
-"""
+
 import pickle
 
-# Tokenizer-i yüklə
+
 with open("azerbaijani_custom.pickle", "rb") as f:
     tokenizer = pickle.load(f)
 
@@ -23,4 +23,4 @@ for t in texts:
     print("🔍 Ayırma:", tokenizer.tokenize(t))
 
 
-"""
+
