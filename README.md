@@ -9,6 +9,7 @@ import pickle
 
 
 with open("azerbaijani_custom.pickle", "rb") as f:
+
     tokenizer = pickle.load(f)
 
 texts = [
