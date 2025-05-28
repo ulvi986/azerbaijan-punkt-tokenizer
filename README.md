@@ -5,23 +5,12 @@ Punkt tokenizer model for Azerbaijani language, compatible with NLTK.
 
 # We use like that:
 
+```python
 import pickle
 
-
-with open("azerbaijani_custom.pickle", "rb") as f:
-
+# Load AZ.pickle (trained standard Punkt model)
+with open("tokenizers/punkt/AZ.pickle", "rb") as f:
     tokenizer = pickle.load(f)
 
-texts = [
-    "Sabah dərs var.Sən gələcəksən?",
-    "Prof. Əli müəllim gəldi.Biz dərsə başladıq.",
-    "Bu, bir testdir.Bakıdır.Gözəldir!",
-    "İyul ayının 20-də getdik.Sən necə?",
-]
-
-for t in texts:
-    print("\n📝 Mətndə:", t)
-    print("🔍 Ayırma:", tokenizer.tokenize(t))
-
-
-
+text = "Ulvi kitab oxuyur.Sabah dərs var.Sən gələcəksən?"
+print(tokenizer.tokenize(text))
